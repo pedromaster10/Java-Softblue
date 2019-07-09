@@ -5,6 +5,10 @@ public class Circunferencia {
 	double pi = 3.14159;
 	double area;
 	
+	public Circunferencia(double raio) {
+		this.raio = raio;
+	}
+	
 	double calculaArea() {
 		area =  pi * (raio * raio);
 		return area;
