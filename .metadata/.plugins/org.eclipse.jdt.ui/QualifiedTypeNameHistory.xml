@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<<<<<<< HEAD
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="Exercicio3.Circunferencia"/>
 <fullyQualifiedTypeName name="Exercicio3.Quadrado"/>
 <fullyQualifiedTypeName name="Exercicio3.Triangulo"/>
 <fullyQualifiedTypeName name="Exercicio3.Trapezio"/>
+=======
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+>>>>>>> 1425c6b01daea31cc1a869adc04bacc3d10a67b8
 </qualifiedTypeNameHistroy>
