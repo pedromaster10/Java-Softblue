@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-INDEX VERSION 1.131+D:\workspace\Java\.metadata\.plugins\org.eclipse.jdt.core
-2552510275.index
-789344348.index
-=======
 INDEX VERSION 1.131+E:\ESTUDO\Workspace\Java\.metadata\.plugins\org.eclipse.jdt.core
->>>>>>> 1425c6b01daea31cc1a869adc04bacc3d10a67b8
 99815418.index
+546852902.index
+789344348.index
 2552510275.index
