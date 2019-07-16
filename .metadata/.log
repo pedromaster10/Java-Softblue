@@ -2819,3 +2819,13 @@ java.nio.file.AccessDeniedException: C:\Program Files\Git\mingw64\etc\.probe-cc5
 	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:111)
 	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:55)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2019-07-16 11:03:46.120 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2019-07-16 11:04:28.440
+!MESSAGE Using Apache MINA sshd as ssh client.
