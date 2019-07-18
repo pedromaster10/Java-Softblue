@@ -2,4 +2,10 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="Exercicio1.Lampada"/>
     <fullyQualifiedTypeName name="Exercicio2.Data"/>
+    <fullyQualifiedTypeName name="exercicio1.Ponto2D"/>
+    <fullyQualifiedTypeName name="exercicio1.Ponto3D"/>
+    <fullyQualifiedTypeName name="exercicio2.Motocicleta"/>
+    <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
+    <fullyQualifiedTypeName name="exercicio2.Automovel"/>
+    <fullyQualifiedTypeName name="exercicio2.Onibus"/>
 </qualifiedTypeNameHistroy>
