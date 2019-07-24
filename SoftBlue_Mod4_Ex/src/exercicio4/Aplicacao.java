@@ -1,6 +1,6 @@
 package exercicio4;
 
-public class Aplicaçao {
+public class Aplicacao {
 
 	public static void main(String[] args) {
 		Turma turma1 = new Turma();
