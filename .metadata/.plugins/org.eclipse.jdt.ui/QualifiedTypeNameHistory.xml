@@ -8,4 +8,8 @@
     <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
     <fullyQualifiedTypeName name="exercicio2.Automovel"/>
     <fullyQualifiedTypeName name="exercicio2.Onibus"/>
+    <fullyQualifiedTypeName name="Exercicio1.AreaCalculavel"/>
+    <fullyQualifiedTypeName name="Exercicio1.Circunferencia"/>
+    <fullyQualifiedTypeName name="Exercicio1.Triangulo"/>
+    <fullyQualifiedTypeName name="Exercicio1.Quadrado"/>
 </qualifiedTypeNameHistroy>
