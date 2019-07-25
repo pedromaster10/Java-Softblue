@@ -2,6 +2,8 @@ package exercicio2;
 
 public abstract class ContaBancaria {
 	
+	public ContaBancaria
+	
 	protected double saldo;
 	
 	public void depositar(double valor) {
@@ -16,5 +18,6 @@ public abstract class ContaBancaria {
 		
 	}
 	
+	public abstract double calcularSaldo();
 	
 }
