@@ -9,11 +9,9 @@ public class Circunferencia  implements AreaCalculavel{
 		this.raio = raio;
 	}
 
-	@Override
 	public double calcularArea() {
 		area =  pi * (raio * raio);
 		return area;
-		
 	}
 
 }

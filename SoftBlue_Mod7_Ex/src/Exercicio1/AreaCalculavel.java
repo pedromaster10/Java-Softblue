@@ -2,6 +2,6 @@ package Exercicio1;
 
 public interface AreaCalculavel {
 	
-	double calcularArea();
+	public abstract double calcularArea();
 
 }
