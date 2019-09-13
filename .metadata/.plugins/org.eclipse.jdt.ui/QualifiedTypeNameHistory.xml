@@ -15,4 +15,10 @@
     <fullyQualifiedTypeName name="exercicio2.ContaCorrente"/>
     <fullyQualifiedTypeName name="exercicio2.ContaInvestimento"/>
     <fullyQualifiedTypeName name="exercicio2.ContaBancaria"/>
+    <fullyQualifiedTypeName name="exercicio3.Porta"/>
+    <fullyQualifiedTypeName name="java.lang.CloneNotSupportedException"/>
+    <fullyQualifiedTypeName name="ContaBancaria"/>
+    <fullyQualifiedTypeName name="SaldoInsuficienteException"/>
+    <fullyQualifiedTypeName name="ValorInvalidoException"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
 </qualifiedTypeNameHistroy>
