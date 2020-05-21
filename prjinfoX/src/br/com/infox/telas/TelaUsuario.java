@@ -52,7 +52,7 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
                 txtUsuNome.setText(null);
                 txtUsuFone.setText(null);
                 txtUsuLogin.setText(null);
-                txtUsuSenha.setText(null);                
+                txtUsuSenha.setText(null);
             }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
@@ -96,6 +96,67 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
         }
     }
 
+    //metodo para alterar dados do ususario
+    private void alterar() {
+        String sql = "update tbusuarios set usuario=?,fone=?,login=?,senha=?,perfil=? "
+                + "where iduser=?";
+        try {
+            pst = conexao.prepareStatement(sql);
+            pst.setString(1, txtUsuNome.getText());
+            pst.setString(2, txtUsuFone.getText());
+            pst.setString(3, txtUsuLogin.getText());
+            pst.setString(4, txtUsuSenha.getText());
+            pst.setString(5, cboUsuPerfil.getSelectedItem().toString());
+            pst.setString(6, txtUsuId.getText());
+
+//validação dos campos obrigatórios
+            if ((txtUsuId.getText().isEmpty()) || (txtUsuNome.getText().isEmpty()) || (txtUsuLogin.getText().isEmpty()) || (txtUsuSenha.getText().isEmpty())) {
+                JOptionPane.showMessageDialog(null, "Preencha todos os campos obrigatorios");
+            } else {
+
+                // a linha abaixo atualiza a tabela usuario com os dados do formulario
+                //a estrutura abaixo é usada para confirmar a alteraçao dos dados na tabela
+                int adicionado = pst.executeUpdate();
+                //a linha abaixo serve de apoio ao entendimento da logica
+                //System.out.println(adicionado);
+                if (adicionado > 0) {
+                    JOptionPane.showMessageDialog(null, "Dados do usuario alterados com sucesso");
+                    txtUsuId.setText(null);
+                    txtUsuNome.setText(null);
+                    txtUsuFone.setText(null);
+                    txtUsuLogin.setText(null);
+                    txtUsuSenha.setText(null);
+                }
+
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
+    
+    //metodo responsavel pela remoçao de usuarios
+    private void remover() {
+        //a estrutura abaixo confirma a remoçao do usuario
+        int confirma=JOptionPane.showConfirmDialog(null, "Tem certeza que deseja remover este usuario?", "Atenção",JOptionPane.YES_NO_OPTION);
+        if (confirma==JOptionPane.YES_OPTION) {
+            String sql="delete from tbusuarios where iduser=?";
+            try {
+                pst=conexao.prepareStatement(sql);
+                pst.setString(1, txtUsuId.getText());
+                int apagado = pst.executeUpdate();
+                if(apagado >0){
+                    JOptionPane.showMessageDialog(null, "Usuario removido com sucesso");
+                    txtUsuId.setText(null);
+                    txtUsuNome.setText(null);
+                    txtUsuFone.setText(null);
+                    txtUsuLogin.setText(null);
+                    txtUsuSenha.setText(null);
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            }
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -189,6 +250,11 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
         btnUsuDelete.setToolTipText("Remover");
         btnUsuDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUsuDelete.setPreferredSize(new java.awt.Dimension(80, 80));
+        btnUsuDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsuDeleteActionPerformed(evt);
+            }
+        });
 
         jLabel7.setText("* Campos obrigatórios");
 
@@ -287,7 +353,8 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_txtUsuIdActionPerformed
 
     private void btnUsuUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuUpdateActionPerformed
-        // TODO add your handling code here:
+        // chamando o metodo alterar
+        alterar();
     }//GEN-LAST:event_btnUsuUpdateActionPerformed
 
     private void btnUsuReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuReadActionPerformed
@@ -303,6 +370,11 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
     private void cboUsuPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboUsuPerfilActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cboUsuPerfilActionPerformed
+
+    private void btnUsuDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuDeleteActionPerformed
+        // chamando o metodo remover
+        remover();
+    }//GEN-LAST:event_btnUsuDeleteActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
